@@ -1,0 +1,17 @@
+<launch>
+
+  <group>
+  <include file="$(find final_project)/launch/turtlebot3_world.launch" />
+      <arg name="enable_robot" value="true" />
+      <arg name="enable_competition" value="true" />
+      <arg name="layout" value="1" />
+      <arg name="gui" value="true" />
+      <arg name="headless" value="false" />
+
+  <include file="$(find final_project)/launch/navigation.launch" />
+  <include file="$(find final_project)/launch/qr_visp.launch" />
+  </group>
+
+  <node pkg="final_project" name="final_project1" type="final_project.py"/>
+
+</launch>
